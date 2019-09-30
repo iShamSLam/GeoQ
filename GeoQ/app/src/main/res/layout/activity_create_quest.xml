@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.CreateQuestActivity">
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Создание квеста"
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id="@+id/ed_start_point"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/createquest_borders"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="8dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+            android:id="@+id/btn_getGeoCode"
+            android:layout_width="107dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circle_button"
+            android:fontFamily="sans-serif-medium"
+            android:text="Определить"
+            android:textColor="@color/primary_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@+id/ed_start_point"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="148dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Точка старта :"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_decription_of_quest" />
+
+    <Button
+            android:id="@+id/btn_createQ_next"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="492dp"
+            android:background="@drawable/circle_button"
+            android:fontFamily="sans-serif-medium"
+            android:text="Далее"
+            android:textColor="@color/primary_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+            android:id="@+id/tv_name_of_quest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Название:"
+            android:textAllCaps="true"
+            android:textColor="@color/greeny"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <EditText
+            android:id="@+id/ed_quest_name"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/createquest_borders"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/tv_name_of_quest"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <TextView
+            android:id="@+id/tv_decription_of_quest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Описание:"
+            android:textAllCaps="true"
+            android:textColor="@color/greeny"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_of_quest" />
+
+    <EditText
+            android:paddingLeft="8dp"
+            android:paddingTop="3dp"
+            android:id="@+id/ed_quest_description"
+            android:layout_width="200dp"
+            android:paddingEnd="8dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/createquest_borders_second_type"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start|top"
+            android:maxLines="8"
+            android:inputType="textMultiLine"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_decription_of_quest"
+            app:layout_constraintTop_toBottomOf="@+id/ed_quest_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

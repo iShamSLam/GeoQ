@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.CurrentQuestFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/gradient_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <com.app.progresviews.ProgressWheel
+                android:id="@+id/wheelprogress"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                app:barWidth="17dp"
+                app:countText="1 из 3"
+                app:countTextColor="@color/primary_light"
+                app:countTextSize="20sp"
+                app:defTextColor="@color/primary_light"
+                app:defTextSize="15sp"
+                app:definitionText="Этапов"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:marginBtwText="15dp"
+                app:percentage="120"
+                app:progressColor="#CDDC39" />
+
+        <TextView
+                android:id="@+id/tv_curr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Название квеста"
+                android:textColor="@color/primary_light"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wheelprogress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Загадка данного этапа:"
+            android:textColor="@color/greeny"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+            android:id="@+id/tv_curr_riddle"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/createquest_borders_second_type"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="4"
+            android:padding="12dp"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+            android:id="@+id/btn_chech_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:background="@drawable/circle_button"
+            android:fontFamily="sans-serif-medium"
+            android:padding="8dp"
+            android:text="Cверить локацию"
+            android:textColor="@color/primary_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_curr_riddle" />
+
+    <Button
+            android:id="@+id/btn_get_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_button"
+            android:fontFamily="sans-serif-medium"
+            android:padding="8dp"
+            android:text="Подсказка"
+            android:textColor="@color/primary_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.604"
+            app:layout_constraintStart_toEndOf="@+id/btn_chech_answer"
+            app:layout_constraintTop_toBottomOf="@+id/tv_curr_help" />
+
+    <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Подсказка:"
+            android:textColor="@color/greeny"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cim_helps"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:clickable="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/cirlce_button_circle_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_curr_riddle"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+            android:id="@+id/tv_curr_help"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="20dp"
+            android:textAlignment="center"
+            android:text="asasaas"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/cirlce_button_circle_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_curr_riddle"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

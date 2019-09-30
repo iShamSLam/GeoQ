@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        tools:context=".ui.activities.LoginActivity">
+
+
+    <TextView
+            android:id="@+id/textView_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Регистрация"
+            android:textColor="@color/primary_light"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tv_username_sg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="ПОЛЬЗОВАТЕЛЬ"
+            android:textColor="@color/primary_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/ed_username_sg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.242"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_signUp"
+            app:layout_constraintVertical_bias="0.907" />
+
+    <EditText
+            android:id="@+id/ed_username_sg"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/edges_bg"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/primary_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_select_photo" />
+
+    <TextView
+            android:id="@+id/tv_mail_sg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="72dp"
+            android:fontFamily="sans-serif-light"
+            android:text="ПОЧТА"
+            android:textColor="@color/primary_light"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_sg" />
+
+    <TextView
+            android:id="@+id/tv_pass_sg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-light"
+            android:text="ПАРОЛЬ"
+            android:textColor="@color/primary_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mail_sg"
+            app:layout_constraintVertical_bias="0.209" />
+
+    <EditText
+            android:id="@+id/ed_email_sg"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/edges_bg"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/primary_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_username_sg" />
+
+    <EditText
+            android:id="@+id/ed_pass_sg"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edges_bg"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/primary_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pass_sg" />
+
+    <Button
+            android:id="@+id/btn_sg"
+            android:layout_width="176dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bnt_back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Зарегистрироваться"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_pass_sg"
+            app:layout_constraintVertical_bias="0.281" />
+
+
+    <Button
+            android:id="@+id/btn_select_photo"
+            android:layout_width="141dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/select_photo_bg"
+            android:fontFamily="sans-serif-medium"
+            android:text="Выберите фотографию"
+            android:textColor="@color/primary_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_signUp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="141dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="16dp"
+            app:civ_border_color="@color/primary_light"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_signUp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

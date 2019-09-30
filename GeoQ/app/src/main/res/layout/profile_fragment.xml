@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Загрузка профиля"
+                android:textColor="@color/accent"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+            android:id="@+id/profile_main_context"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/rellay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_bg"
+                android:paddingBottom="20dp">
+
+            <RelativeLayout
+                    android:id="@+id/image_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circle_bordger">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/select_photo_bg"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_launcher_foreground" />
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/tv_username_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Пользователь"
+                    android:textColor="@color/primary_light"
+                    android:textSize="32sp" />
+
+            <Button
+                    android:id="@+id/button_sign_out"
+                    android:layout_width="85dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/image_user"
+                    android:background="@drawable/circle_bordger"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Выйти"
+                    android:textColor="@color/primary_light"
+                    android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/linllay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rellay"
+                android:orientation="horizontal">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/accent"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_passed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textColor="@color/primary_light"
+                            android:textSize="25sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Пройденных"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary_light"
+                            android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/primary_dark"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_distance_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textColor="@color/primary_light"
+                            android:textSize="25sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Расстояние в км"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary_light"
+                            android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/linllay">
+
+            <LinearLayout
+                    android:id="@+id/tv_announce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Созданные квесты:"
+                        android:textColor="@color/accent"
+                        android:textSize="19sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tv_announce" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/button_new_quest"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignTop="@+id/tv_announce"
+                    android:layout_alignEnd="@+id/tv_announce"
+                    android:layout_marginTop="172dp"
+                    android:layout_marginEnd="33dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_black_24dp"
+                    app:civ_border_color="@color/accent"
+                    app:civ_border_width="15dp"
+                    app:civ_circle_background_color="@color/accent" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        tools:context=".ui.activities.LoginActivity">
+
+
+    <ImageView
+            android:id="@+id/imageView_logo"
+            android:layout_width="222dp"
+            android:layout_height="149dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.231" />
+
+    <TextView
+            android:id="@+id/textView_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Авторизация"
+            android:textColor="@color/primary_light"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
+
+    <TextView
+            android:id="@+id/tv_user_lg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-light"
+            android:text="ПОЧТА"
+            android:textColor="@color/primary_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_login"
+            app:layout_constraintVertical_bias="0.099" />
+
+    <TextView
+            android:id="@+id/tv_pass_lg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-light"
+            android:text="ПАРОЛЬ"
+            android:textColor="@color/primary_light"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_lg"
+            app:layout_constraintVertical_bias="0.237" />
+
+    <EditText
+            android:id="@+id/ed_user_lg"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edges_bg"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/primary_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_lg" />
+
+    <EditText
+            android:id="@+id/ed_pass_lg"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edges_bg"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/primary_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pass_lg" />
+
+    <Button
+            android:id="@+id/bt_sgn_in"
+            android:layout_width="176dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bnt_back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Авторизоваться"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_pass_lg"
+            app:layout_constraintVertical_bias="0.281" />
+
+    <Button
+            android:id="@+id/btn_sng_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reg_back"
+            android:fontFamily="sans-serif"
+            android:text="Нет аккаунта?"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_sgn_in"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
