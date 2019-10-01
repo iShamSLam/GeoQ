@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991126329318",
+    "firebase_url": "https://geoq-668bb.firebaseio.com",
+    "project_id": "geoq-668bb",
+    "storage_bucket": "geoq-668bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991126329318:android:80bee5b747acd835",
+        "android_client_info": {
+          "package_name": "com.example.geoq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991126329318-he6v9ahstdp25uar9duifslhkrlnqh1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.geoq",
+            "certificate_hash": "a431b7ba5778c6e53265d39428d6c77d43aa6bf4"
+          }
+        },
+        {
+          "client_id": "991126329318-teg0cpntn2cqgfmek72b2o5t87tvctcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZd3_lYQkJHoNasoZMFdK7WvKhzypo_a8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991126329318-teg0cpntn2cqgfmek72b2o5t87tvctcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
