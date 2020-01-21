@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Run Unit tests
-        run: bash ./gradlew test --stacktrace
+        run: chmod +x ./gradlew
       - name: build release 
         run: ./gradlew assembleRelease
       - name: Firebase App Distribution
