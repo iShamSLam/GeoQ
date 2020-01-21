@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Run Unit tests
-        run: chmod +x ./gradlew
+        run: chmod +x GeoQ/GeoQ/gradlew
       - name: build release 
         run: ./gradlew assembleRelease
       - name: Firebase App Distribution
