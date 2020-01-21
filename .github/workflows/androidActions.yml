@@ -20,7 +20,7 @@ jobs:
       - name: Run Unit tests
         run: chmod +x GeoQ/GeoQ/gradlew
       - name: build release 
-        run: ./gradlew assembleRelease
+        run: GeoQ/GeoQ/gradlew assembleRelease
       - name: Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.1.1
         with:
